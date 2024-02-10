@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_instance/get_instance.dart';
+import 'package:healathome/controller/homecontroller.dart';
 
 import '../cust_widget/cust_container.dart';
 
-class Edit extends StatefulWidget {
+class Edit extends StatelessWidget {
   const Edit({Key? key}) : super(key: key);
 
-  @override
-  State<Edit> createState() => _EditState();
-}
-
-class _EditState extends State<Edit> {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
+    var controller=Get.put(HomeController());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -49,10 +48,11 @@ class _EditState extends State<Edit> {
                 const SizedBox(
                   height: 10,
                 ),
-                const SizedBox(
+                 SizedBox(
                   height: 50,
                   child: TextField(
-                    decoration: InputDecoration(border: OutlineInputBorder()),
+                    controller: controller.name,
+                    decoration: const InputDecoration(border: OutlineInputBorder()),
                   ),
                 ),
                 const SizedBox(height: 10,),
@@ -60,10 +60,11 @@ class _EditState extends State<Edit> {
                 const SizedBox(
                   height: 10,
                 ),
-                const SizedBox(
+                 SizedBox(
                   height: 50,
                   child: TextField(
-                    decoration: InputDecoration(border: OutlineInputBorder()),
+                    controller: controller.email,
+                    decoration: const InputDecoration(border: OutlineInputBorder()),
                   ),
                 ),
                 const SizedBox(height: 10,),
@@ -71,10 +72,11 @@ class _EditState extends State<Edit> {
                 const SizedBox(
                   height: 10,
                 ),
-                const SizedBox(
+                 SizedBox(
                   height: 50,
                   child: TextField(
-                    decoration: InputDecoration(border: OutlineInputBorder()),
+                    controller: controller.phone,
+                    decoration: const InputDecoration(border: OutlineInputBorder()),
                   ),
                 ),
                 const SizedBox(height: 10,),
@@ -82,10 +84,11 @@ class _EditState extends State<Edit> {
                 const SizedBox(
                   height: 10,
                 ),
-                const SizedBox(
+                 SizedBox(
                   height: 50,
                   child: TextField(
-                    decoration: InputDecoration(border: OutlineInputBorder()),
+                    controller: controller.address,
+                    decoration: const InputDecoration(border: OutlineInputBorder()),
                   ),
                 ),
                 const SizedBox(

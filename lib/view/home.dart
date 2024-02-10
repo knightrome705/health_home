@@ -145,17 +145,17 @@ class _HomeState extends State<Home> {
                                  ],
                                ),
                              ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal:30),
+                            const Padding(
+                              padding: EdgeInsets.symmetric(horizontal:30),
                               child: Row(
                                 children: [
-                                  const Text("kfedmoek,ek,oednjn jdnc jdncdjnc"),
+                                  Text("kfedmoek,ek,oednjn jdnc jdncdjnc"),
                                 ],
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal:30,vertical: 20),
-                              child: const Row(
+                            const Padding(
+                              padding: EdgeInsets.symmetric(horizontal:30,vertical: 20),
+                              child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text("jfefjeiieeidekdeodjcnjdcn",style: TextStyle(color: Colors.grey),),
